@@ -17,7 +17,7 @@ book = xlwt.Workbook(encoding='utf-8', style_compression=0)
 
 # 通过这个book对象新建一个sheet，命名为我的豆瓣想读的书
 sheet = book.add_sheet('按收藏时间排序', cell_overwrite_ok=True)
-
+saveName = '张三和李四读过的共同的图书.xls'
 # 定义一个全局的行数n，为了下面parser_to_excel方法写入excel时可以找到从哪一行开始写入
 n = 0
 urlSet_list = list()
@@ -197,4 +197,4 @@ if __name__ == "__main__":
 
 
     # 保存
-    book.save('张三和李四读过的共同的图书.xls')
+    book.save(saveName)

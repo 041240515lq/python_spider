@@ -26,7 +26,7 @@ sheet = book.add_sheet('按收藏时间排序', cell_overwrite_ok=True)
 
 # 定义一个全局的行数n，为了下面parser_to_excel方法写入excel时可以找到从哪一行开始写入
 n = 0
-
+saveName = '张三在豆瓣上标记的读过的书.xls'
 
 # 通过url得到页面全部内容
 def get_url_content(url):
@@ -188,5 +188,5 @@ if __name__ == "__main__":
                 else:
                     break
                     # 保存
-    book.save('张三在豆瓣上标记的读过的书.xls')   # 13:41开始
+    book.save(saveName)
 
