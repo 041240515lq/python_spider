@@ -1,6 +1,8 @@
 # python_spider 
 程序运行要求：需要在用户的pc机上安装python3.0及以上版本，并配置好环境变量。
+
 文件中有两个脚本程序：spiderBook.py和outputCommonWantBook.py。
+
 一.脚本spiderBook.py的功能是爬取某个用户在豆瓣上标记的想读或者读过的图书信息。
 用户运行需要将代码中的变量first_url的值设置为目标用户在豆瓣上标记的想读或者已读的图书的首页的url。如果需要修改程序运行后生成的excel文件的名字，
 需要修改saveName的值。例如我在豆瓣上想读的图书的首页url为“https://book.douban.com/people/154001100/collect?sort=time&start=0&mode=grid&tags_sort=count”
