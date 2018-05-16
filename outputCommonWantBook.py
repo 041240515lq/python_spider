@@ -31,14 +31,14 @@ num = 0
 
 count = 0
 
-list_referer = ['https://book.douban.com/people/154001100/collect?sort=rating&start=0&mode=grid&tags_sort=count',
-                    'https://book.douban.com/people/138083612/collect?sort=time&start=0&mode=grid&tags_sort=count']
+# list_referer = ['https://book.douban.com/people/154001100/collect?sort=rating&start=0&mode=grid&tags_sort=count',
+#                     'https://book.douban.com/people/138083612/collect?sort=time&start=0&mode=grid&tags_sort=count']
 # 通过url得到页面全部内容
-def get_url_content(url,referer):
+def get_url_content(url):
     try:
         # 构造发送请求
         request = urllib.request.Request(url)
-        request.add_header('Referer', referer)
+        request.add_header('Referer', url)
         # 发出请求并取得响应
         response = urllib.request.urlopen(request)
     except urllib.request.HTTPError as err:
@@ -126,10 +126,10 @@ if __name__ == "__main__":
     list_visit_url = ['https://book.douban.com/people/154001100/collect?sort=time&start=0&mode=grid&tags_sort=count',
                       'https://book.douban.com/people/138083612/collect?sort=time&start=0&mode=grid&tags_sort=count']
 
-    index = 0
+    # index = 0
     for tar_url in list_visit_url:
         # 获取初始化页面的内容
-        content = get_url_content(tar_url, list_referer[index])
+        content = get_url_content(tar_url)
 
         # 把内容解析成BeautifulSoup结构(BeautifulSoup的内容可以看下http://beautifulsoup.readthedocs.io/zh_CN/latest/)
         soup = BeautifulSoup(content, 'html.parser')
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     # print(urlSet_list[1])
     # print("urlSet_list ")
     # print(urlSet_list)
-    index += 1
+    # index += 1
     union_url = urlSet_list[0] & urlSet_list[1]  # 两位读者共有的图书的url
     # print(urlSet_list[0])
     # print(urlSet_list[1])
