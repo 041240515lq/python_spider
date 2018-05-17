@@ -1,9 +1,13 @@
 
+
 # python_spider 
 程序运行要求：需要在用户的pc机上安装python3.0及以上版本，并配置好环境变量。
 需要安装一下三个库，打开cmd窗口运行：
+
 安装pip,运行命令python -m pip install -U pip
+
 安装beautifulSoup库,运行命令pip install beautifulSoup4
+
 安装xlwt库，运行命令pip install xlwt
 
 文件中有两个脚本程序：spiderBook.py和outputCommonWantBook.py。
